@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.ywn.calculator";
+option java_outer_classname = "CalculatorProto";
+
+service CalculatorService {
+  rpc Add (AddRequest) returns (AddResponse);
+}
+
+message AddRequest {
+  double num1 = 1;
+  double num2 = 2;
+}
+
+message AddResponse {
+  double result = 1;
+}
